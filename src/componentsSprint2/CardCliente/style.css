@@ -1,0 +1,122 @@
+.card-cliente {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 30px;
+    padding: 30px 26.5px 24px 24px;
+    display: flex;
+}
+.titulo-cliente-tabela-cobrancas{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 130%;
+
+    display: flex;
+    align-items: center;
+
+    color: #3F3F55;
+}
+
+.main-cliente-info-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+}
+.logo-title-cliente {
+    display: flex;
+    align-items: left;
+    justify-content: flex-start;
+    gap: 22px;
+    margin-left: 0px;
+    width: 100%;
+    padding-left: 240px;
+}
+
+.cliente-selecionado-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 130%;
+
+    display: flex;
+    align-items: center;
+
+    color: #3F3F55;
+
+}
+
+.card-cliente-titulo-btn-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 24px;
+}
+
+.card-cliente-titulo-btn-container h2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 130%;
+    color: #3F3F55;
+}
+
+.dados-cliente-linha1 {
+    display: flex;
+    gap: 90px;
+    align-items: flex-end;
+    width: 100%;
+
+
+}
+
+.infos-linha-container-main {
+    display: flex;
+    flex-direction: column;
+    gap: 54px;
+
+}
+
+.infos-linha-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+}
+
+.dados-cliente-linha2 {
+    display: flex;
+    gap: 142px;
+    align-items: self-end ;
+    margin-top: -10px;
+    flex-direction: column;
+}
+
+.container-flex {
+    display: flex;
+    gap: 90px;
+    margin-left: 30px;
+}
+
+.span-title {
+    color: #3F3F55;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.span-value {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #3F3F55;
+}

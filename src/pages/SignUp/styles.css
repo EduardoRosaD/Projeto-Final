@@ -1,0 +1,74 @@
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    max-height: 100vh;
+}
+
+
+.container1 {
+    width: 33%;
+    background-color: #F0F0F5;
+    padding-top: 174px;
+    padding-left: 59px;
+}
+
+.container2 {
+    width: 77%;
+    height: 100vh;
+    background-color: #F8F8F9;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+
+
+}
+
+.container2 a {
+
+    
+    color: #DA0175;
+    text-decoration: underline;
+
+}
+
+
+.progresso {
+    display: flex;
+    gap: 8px;
+}
+
+.progresso div {
+    width: 82px;
+    height: 6px;
+    border-radius: 20px;
+
+}
+
+.link-cadastro-container {
+    text-align: center;
+}
+
+.botao {
+    width: 160px;
+    height: 33px;
+    background: #DA0175;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao:hover {
+    cursor: pointer;
+}
+
+.botao span {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #F8F8F9;
+}

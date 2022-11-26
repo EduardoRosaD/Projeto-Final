@@ -1,0 +1,43 @@
+.logo-titulo-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+ h1#modal-modal-title-cobranca{
+ margin-top: 27px !important;
+}
+.detalhes-cobranca-container{
+   display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.detalhes-cobranca-container h2{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;  
+    color: #3F3F55;
+}
+.titulo-valor-container{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+}
+.dupla-titulo-valor-container{
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 146px;
+}
+ .css-ix1f03-MuiTypography-root{
+
+    margin-top: 0px !important;
+}

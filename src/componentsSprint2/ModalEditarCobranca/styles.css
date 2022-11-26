@@ -1,0 +1,150 @@
+.form-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 600px;
+}
+
+h1#modal-modal-title-cobranca {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    margin-bottom: 17px;
+    margin-top: 40px;
+    margin-left: 30px;
+    
+
+}
+
+.errorMessage {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #E70000;
+}
+
+input#modalipt1 {
+    width: 410px;
+}
+
+input#modalipt2 {
+    width: 410px;
+}
+
+.modal-edt-container-cliente {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-right: 5px;
+    margin-right: 0px;
+}
+
+.modal-edt-container-cliente input {
+    width: 177px !important;
+}
+
+.input-senha-edt-container-cliente input {
+    width: 380px;
+}
+
+.input-senha-edt-container-cliente label {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.cadastro-alterado {
+    width: 600px;
+    height: 512px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+}
+
+.checkedImg {
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    border: 4px solid #0E8750;
+    padding: 24px 17.74px 24.76px 17px;
+    margin: 0px auto;
+    margin-top: 150px;
+}
+
+.closedImg-cadastro {
+    position: absolute;
+    height: 20px;
+    width: 18px;
+    top: 20px;
+    right: 30px;
+}
+
+.closedImg:hover {
+    cursor: pointer;
+}
+
+
+
+.title-logo-container {
+    display: flex;
+    align-items: left;
+    width: 100%;
+    position: relative;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input:focus {
+    border: none !important;
+}
+
+.btns-cadastro-cliente-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 20px;
+
+}
+
+.cobrancaStatus {
+    width: 100%;
+    background: #F0F0F5;
+    border-radius: 10px;
+    height: 48px;
+    text-align: left;
+    padding-left: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #3F3F55;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.cadastro-modal-container{
+    margin-bottom: 50px;
+    width: 100%;
+}
+.btns-cadastro-cobranca-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}

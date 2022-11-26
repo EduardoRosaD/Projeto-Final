@@ -1,0 +1,75 @@
+
+.MuiTypography-displayBlock {
+    color: #0E8750 !important;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700 !important;
+    font-size: 18px !important;
+}
+
+.MuiTypography-body1 {
+    font-family: 'Nunito' !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    font-size: 18px !important;
+    line-height: 130% !important;
+    color: #3F3F55 !important;
+    
+}
+span.MuiStepConnector-line.MuiStepConnector-lineVertical {
+    border-left: 3px solid #0E8750 !important;
+    height: 40px;
+    margin-top: 4px ;
+}
+.MuiStepIcon-root.MuiStepIcon-root{
+    color: #0E8750 !important;
+    border: 1px solid #0E8750!important;
+    width: 32px!important;
+    height: 32px!important;
+    border-radius: 50%;
+    fill: #0E8750 !important; 
+    margin-right: 15px !important;
+    padding: 11.0px !important;
+}
+.MuiStepIcon-root.MuiStepIcon-active{
+    color: #0E8750 !important;
+    border: 12.8px solid #0E8750 !important;
+    height: 32px!important;
+    width: 5px;
+    border-radius: 50%;
+    fill: white!important;
+    padding: 0px !important;
+   
+}
+.MuiStepIcon-root.MuiStepIcon-completed{
+    color: #0E8750 !important;
+    border: 0px solid #0E8750 !important;
+    padding: 0px!important;
+    
+}
+.MuiStepIcon-text{
+    fill: none !important;
+}
+
+
+.MuiTypography-displayBlock {
+    color: #0E8750 !important;
+    font-family: 'Montserrat';
+    font-style: normal;
+    
+    font-weight: 700 !important;
+    font-size: 18px !important;
+    line-height: 130% !important;
+}
+
+.MuiTypography-body1 {
+    font-family: 'Nunito' !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    font-size: 18px !important;
+    line-height: 130% !important;
+    color: #3F3F55 !important;
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.card.css-pwngrv-MuiPaper-root-MuiCard-root {
+    background-color: #F8f8f9 !important;
+}

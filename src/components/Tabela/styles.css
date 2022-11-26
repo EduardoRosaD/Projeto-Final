@@ -1,0 +1,27 @@
+.css-1pclhgl-MuiTable-root{
+    min-width: 357px!important;
+}
+
+th.MuiTableCell-root.MuiTableCell-head.MuiTableCell-sizeMedium.css-1spv04i-MuiTableCell-root {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 50px;
+}
+th.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium.css-87p0o9-MuiTableCell-root {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 40px;
+    color: #6E6E85;
+}
+td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-alignCenter.MuiTableCell-sizeMedium.css-1mqqxmc-MuiTableCell-root {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 40px;
+    color: #6E6E85;
+}

@@ -1,0 +1,123 @@
+.header {
+    height: 62px;
+    display: flex;
+    width: 92vw;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 35.5px;
+    border-bottom: 1px solid #0E8750;
+    margin-bottom: 19px;
+}
+
+.header h1 {
+    margin-left: 121px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 130%;
+}
+
+.header-container {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+
+}
+
+.iniciais-container {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    background-color: #DEDEE9;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    color: #0E8750;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.nome-btn-container {
+    max-height: 13px;
+    display: flex;
+    gap: 13px;
+    align-items: center;
+    margin-right: 135px;
+}
+
+.nome-btn-container span {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #0E8750
+}
+
+.nome-btn-container button {
+    border: 0px solid white;
+    margin: none;
+    padding: 0px;
+    background-color: #F8F8F9;
+}
+
+.p-container {
+    display: flex;
+    gap: 11px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.setaMenu {
+    position: relative;
+}
+
+.setaMenu:hover {
+    cursor: pointer;
+}
+.pointer:hover{
+    cursor: pointer;
+}
+
+.modalMenor {
+    position: absolute;
+    top: 70px;
+    right: 83px;
+    width: 92px;
+    height: 51px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    outline: 1px solid white;
+    box-shadow: 1px 0px 10px 10px rgb(13 12 13 / 6%);
+
+}
+.modalMenor button{
+    background-color: white;
+}
+
+.orelinha {
+
+    position: absolute;
+    top: -10px;
+    left: 10px;
+
+    width: 0;
+    height: 0;
+    border-top: 0px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 9px solid white;
+
+
+}

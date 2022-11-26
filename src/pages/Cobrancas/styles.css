@@ -1,0 +1,72 @@
+.clientes-title-btn-input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 100px 0px 120px;
+    margin-bottom: 30px;
+    margin-right: 40px;
+    margin-top: 24px;
+}
+
+.cliente-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 130%;
+    color: #3F3F55;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.btn-input {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.btn-input button {
+    margin-top: 0px !important;
+}
+
+.modal-sucesso-cadastro-cliente {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    background: #C3D4FE;
+    box-shadow: 0px 4px 42px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 15px 16px;
+    gap: 37px;
+    right: 112px;
+    bottom: 66px;
+}
+.close-cliente{
+    height: 10px;
+    width: 10px;
+}
+.close-cliente:hover{
+    cursor: pointer;
+}
+
+.modal-recusa-deletar-cobranca {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    background: #F2D6D0;
+    box-shadow: 0px 4px 42px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 15px 16px;
+    gap: 37px;
+    right: 112px;
+    bottom: 66px;
+}
+.modal-recusa-deletar-cobranca p{
+    color: #AE1100 !important;
+
+}

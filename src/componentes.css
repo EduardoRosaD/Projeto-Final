@@ -1,0 +1,149 @@
+
+/* COMPONENTE MEDIDOR PROGRESSO */
+
+.MuiPaper-root.MuiStepper-root.MuiStepper-vertical.MuiPaper-elevation0 {
+    background-color: #F0F0F5 !important;
+}
+
+/* COMPONENTE PRIMEIRA ETAPA */
+label.card__label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+    border-radius: 10px;
+}
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+    box-shadow: 0px 1px 2px rgb(16 24 40 / 5%) !important;
+}
+
+
+/* COMPONENTE CARD SEGUNDA ETAPA CADASTRO */
+
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.card2.css-pwngrv-MuiPaper-root-MuiCard-root{
+    background-color: #F8F8F9 !important;
+}
+h2.MuiTypography-root.MuiTypography-h5.card2__title.css-ag7rrr-MuiTypography-root {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.card2.css-mx8tbv{
+    background-color: #F8F8F9 !important;
+}
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.MuiInputBase-adornedEnd.css-i3aq5o-MuiInputBase-root-MuiOutlinedInput-root {
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.css-1umtbbl-MuiButtonBase-root-MuiButton-root {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 10px;
+}
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.MuiInputBase-adornedEnd {
+    background-color: white !important;
+    box-shadow: 0px 1px 2px rgb(16 24 40 / 5%);
+}
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.MuiInputBase-adornedEnd.css-1crffar-MuiInputBase-root-MuiOutlinedInput-root {
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 2px rgb(16 24 40 / 5%);
+}
+ /* COMPONENTE CARD TERCEIRA ETAPA CADASTRO */
+
+ .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.card3.css-pwngrv-MuiPaper-root-MuiCard-root {
+    width: 612px  !important;
+    height: 512px  !important;
+    margin:  34px auto  !important;
+    border-radius: 30px  !important;
+
+}
+h4.MuiTypography-root.MuiTypography-h4.css-5lbw0b-MuiTypography-root {
+    font-family: 'Montserrat'!important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 24px !important;
+    line-height: 130%   !important;
+}
+
+/* COMPONENTE LOGIN */
+h1.MuiTypography-root.MuiTypography-h4.card__title.css-5lbw0b-MuiTypography-root {
+    font-family: 'Montserrat ', sans-serif !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 24px !important;
+    line-height: 130% !important;
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.card.css-mx8tbv{
+    background: #F8F8F9 !important;
+}
+h1.MuiTypography-root.MuiTypography-h4.card__title.css-1xvinid {
+    font-family: 'Montserrat',sans-serif !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 24px !important;
+    line-height: 130% !important;
+}
+
+/* COMPONENTE MODAL EDITAR CADASTRO */
+
+.css-6en3ts {
+    padding: 23px !important;
+    height: 721px !important; ;
+}
+button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.css-1umtbbl-MuiButtonBase-root-MuiButton-root {
+    margin-top: 0px !important;
+}
+/* input cpf e telefone */
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    height: 1em !important;
+}
+
+/* MODAL CADASTRO EDITADO COM SUCESSO */
+.MuiBox-root.css-c8w3po {
+    height: 512px;
+    width: 600px;
+}
+
+/* TABELA CLIENTES */
+
+.container-tabelas-clientes .css-11xur9t-MuiPaper-root-MuiTableContainer-root {
+    box-shadow: none !important;
+    border-radius: 30px!important;
+}
+
+
+.container-tabelas-clientes-home .css-11xur9t-MuiPaper-root-MuiTableContainer-root {
+    border-radius: 0px!important;
+}
+
+/* MODAL */
+
+/* modal background color */
+
+.css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop {
+
+    background-color: rgb(0 0 0 / 9%) !important;
+    box-shadow: none !important;
+
+    
+}
+
+.css-1brbbwx {
+    background-color: #fff;
+    border: 0px solid white !important;
+    padding: 32px !important;
+    box-shadow: none !important;
+    border-radius: 30px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 60%;
+    max-width: 600px !important;
+    width: 100%     !important;
+}
