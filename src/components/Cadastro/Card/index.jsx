@@ -2,8 +2,10 @@ import { TextField, Typography } from '@mui/material';
 import Card from '@mui/material/Card';
 import * as React from 'react';
 import './styles.css';
-export default function BasicCard({ forms,  handleChange,  }) {
+import useUser from '../../../hooks/useUser';
 
+export default function BasicCard() {
+    const {  formsUserSignUp, handleSignupData } = useUser();
 
   return (
     <Card className='card'
@@ -11,9 +13,9 @@ export default function BasicCard({ forms,  handleChange,  }) {
         
       <div className='card-container'>
 
-        <Typography className='card__title' variant='h4' component={'h1'}>{forms.title}</Typography>
+        <Typography className='card__title' variant='h4' component={'h1'}>{ formsUserSignUp.title}</Typography>
 
-        {forms.inputs.map((item) => (
+        { formsUserSignUp.inputs.map((item) => (
           <div className='card-container'>
             <div className='labelSenha-container'>
               <label className='card__label' to={item.placeHolder}
@@ -31,15 +33,12 @@ export default function BasicCard({ forms,  handleChange,  }) {
               type={item.type}
               name={item.name}
               sx={{borderRadius: '10px',border: '1px solid #D0D5DD', height: '46px' }}
-              onChange={(e)=>handleChange(e)}
+              onChange={(e)=>handleSignupData(e)}
               focused={false}
             />
           
           </div>
         ))}
-
-
-
       </div>
    
     </Card>

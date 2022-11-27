@@ -6,7 +6,7 @@ import * as React from 'react';
 import { useContext } from 'react';
 import closed from '../../assets/closed.svg';
 import clientesLogoOff from '../../assets/images/clientesLogoOff.svg';
-import Botao from '../../components/Botao';
+import Botao from '../../components/Cadastro/Botao';
 import UserContext from '../../context/UserContext';
 import api from '../../services/api';
 import formatarCpf from '../../utils/formataCpf';

@@ -1,22 +1,24 @@
 import { Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Botao from '../../components/Botao/index';
+import Botao from '../../components/Cadastro/Botao/index';
 import Card from '../../components/Cadastro/Card';
 import Card2 from '../../components/Cadastro/Card2';
 import Card3 from '../../components/Cadastro/Card3';
-import MedidorProgresso from '../../components/medidorProgresso/index';
+import MedidorProgresso from '../../components/Cadastro/medidorProgresso/index';
 import api from '../../services/api';
 import validaNome from '../../utils/validaNome';
 import './styles.css';
+import useUser from '../../hooks/useUser';
 
 
 
 
 
 function SignUp() {
+    const { handleNextSignUp, forms } = useUser();
     const navigate = useNavigate();
-    const [activeStep, setActiveStep] = React.useState(0);
+    
     const [faseAtual, setFaseAtual] = React.useState('fundo1');
     const [btnText, setBtnText] = React.useState('Continuar');
     const [inps, setInps] = React.useState([]);
@@ -58,7 +60,7 @@ function SignUp() {
              await api.post('usuario', inps)
 
             alert('Usuário cadastrado com sucesso!')
-            setActiveStep((prevActiveStep) => prevActiveStep + 2);
+            handleNextSignUp(2)
             setFaseAtual('fundo3');
             setBtnText('Ir para login');
         } catch (error) {
@@ -104,7 +106,7 @@ function SignUp() {
 
 
 
-        setActiveStep((prevActiveStep) => prevActiveStep + 1);
+        handleNextSignUp(1)
 
         setFaseAtual('fundo2');
         setBtnText('Finalizar cadastro');
@@ -113,25 +115,14 @@ function SignUp() {
 
 
 
-    const forms = {
-        title: 'Adicione seus dados',
-        inputs: [
-            { placeHolder: 'Digite seu nome', type: 'text', name: 'nome_usuario', label: 'Nome'},
-            { placeHolder: 'Digite seu e-mail', type: 'text', name: 'email', label: 'E-mail' },
-        ],
-        onSubmit: onSubmit
-    }
-
 
     return (
         <div className='main-container'>
             <div className='container1'>
                 <Container>
                     <Grid>
-                        <Grid item xs={12}>
+                        <Grid item xs={1}>
                             <MedidorProgresso
-                                activeStep={activeStep}
-                                setActiveStep={setActiveStep}
                             ></MedidorProgresso>
                         </Grid>
                     </Grid>
@@ -147,13 +138,7 @@ function SignUp() {
                             <form onSubmit={onSubmit}>
                                 {faseAtual === 'fundo1' &&
                                     < Card forms={forms}
-                                        handleNext={handleNext}
                                         handleChange={handleChange}
-                                        inps={inps}
-                                        faseAtual={faseAtual}
-                                        setFaseAtual={setFaseAtual}
-                                        btnText={btnText}
-                                        setBtnText={setBtnText}
                                     />
                                 }
                                 {faseAtual === 'fundo2' &&
@@ -224,6 +209,7 @@ function SignUp() {
             </div>
 
         </div>
+       
     )
 }
 

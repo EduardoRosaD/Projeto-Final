@@ -4,6 +4,7 @@ import Stepper from '@material-ui/core/Stepper';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import React from 'react';
+import useUser from '../../../hooks/useUser';
 import './styles.css';
 
 
@@ -33,7 +34,8 @@ function getSteps() {
 }
 
 
-export default function VerticalLinearStepper({activeStep,setActiveStep}) {
+export default function VerticalLinearStepper() {
+  const { activeStep } = useUser();
   const classes = useStyles();
   
   const steps = getSteps();

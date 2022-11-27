@@ -1,7 +1,7 @@
 import { Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Botao from '../../components/Botao/index';
+import Botao from '../../components/Cadastro/Botao/index';
 import Card from '../../components/Cadastro/Card';
 import api from '../../services/api';
 import './styles.css';
@@ -45,9 +45,8 @@ function SignIn() {
 
     function handleChange(e) {
         setInps2({ ...inps2, [e.target.name]: e.target.value });
-       
-
     }
+    
     const forms = {
         title: 'Faça seu login!',
         inputs: [

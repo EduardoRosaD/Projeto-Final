@@ -6,8 +6,10 @@ import InputAdornment from '@mui/material/InputAdornment';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import * as React from 'react';
 import './styles.css';
+import useUser from '../../hooks/useUser';
 
-export default function InputAdornments({senhaPlaceholder, handleChange2, inps, nome}) {
+export default function InputAdornments({type}) {
+  const {  formsUserSignUp, handleSignupData, handleConfirmSenha, signUpDataState  } = useUser();
   const [values, setValues] = React.useState({
     amount: '',
     password: '',
@@ -34,15 +36,15 @@ export default function InputAdornments({senhaPlaceholder, handleChange2, inps, 
        
         <FormControl sx={{ m: 1, width: '360' }} variant="outlined"  focused={false}>
           
-          <label to='outlined-adornment-password'>{senhaPlaceholder}</label>
+          <label to='outlined-adornment-password'>{type === "confirm" ?'Repita a senha*' : 'Senha*' }</label>
           <OutlinedInput
           sx={{  minWidth: '275', background: 'white', borderRadius: '10px', border: '1px solid #E0E0E0', }}
-            id={nome}
+            id={type === "confirm" ? 'confirmacaoSenha' : 'senha'}
             type={values.showPassword ? 'text' : 'password'}
-            value={ inps.senha}
-            onChange={(e)=>handleChange2(e)}
-            placeholder={senhaPlaceholder}
-            name= {'senha'}
+            value={ signUpDataState.senha}
+            onChange={type === "confirm" ? handleConfirmSenha : handleSignupData}
+            placeholder={type === "confirm" ?'Repita a senha*' : 'Senha*' }
+            name= {type === "confirm" ? 'confirmacaoSenha' : 'senha'}
             focused={false}
             endAdornment={
               <InputAdornment

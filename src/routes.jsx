@@ -5,6 +5,7 @@ import  SignUp  from './pages/SignUp/index.jsx'
 import  Home  from './pages/Home/index.jsx'
 import  Clientes from './pages/Clientes/index.jsx'
 import  Cobrancas from './pages/Cobrancas/index.jsx'
+import  { UserProvider } from './context/UserContext'
 
 function ProtectedRoutes({ redirectTo }){
     const token = localStorage.getItem('token')
@@ -14,6 +15,7 @@ function ProtectedRoutes({ redirectTo }){
 
 export default function MyRoutes(){
     return (
+        <UserProvider>
         <Routes>
             <Route path='/' element={ <SignIn/>}> </Route>
 
@@ -40,6 +42,7 @@ export default function MyRoutes(){
         
 
         </Routes>
+        </UserProvider>
     )
 }
 
