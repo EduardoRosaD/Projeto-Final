@@ -6,7 +6,6 @@ import './styles.css'
 
 
 
-
 const ColorButton = styled(Button)(() => ({
   backgroundColor: '#DA0175 !important',
   textTransform: 'none',
@@ -18,17 +17,16 @@ const ColorButton = styled(Button)(() => ({
   },
 }));
 
-export default function CustomizedButtons({handleNext, nome, type, width, handleOpen ,marginTop }) {
+export default function CustomizedButtons({ text, type ,action }) {
   return (
     <Stack spacing={2} direction="row">
       <ColorButton
-      onClick={nome === '+ Adicionar cliente' ? handleOpen : handleNext}
+      onClick={action}
       disableRipple
       variant="contained"
       type={type}
-      style={{width: width, marginTop: '40px'}}
       >
-      { nome} </ColorButton>
+      { text} </ColorButton>
     </Stack>
   );
 }
