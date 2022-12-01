@@ -6,10 +6,10 @@ import InputAdornment from '@mui/material/InputAdornment';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import * as React from 'react';
 import './styles.css';
-import useUser from '../../hooks/useUser';
+import useUser from '../../../hooks/useUser';
 
 export default function InputAdornments({type}) {
-  const {  formsUserSignUp, handleSignupData, handleConfirmSenha, signUpDataState  } = useUser();
+  const {  handleSignUpData, handleConfirmSenha, signUpDataState, confirmSenhaState  } = useUser();
   const [values, setValues] = React.useState({
     amount: '',
     password: '',
@@ -41,8 +41,8 @@ export default function InputAdornments({type}) {
           sx={{  minWidth: '275', background: 'white', borderRadius: '10px', border: '1px solid #E0E0E0', }}
             id={type === "confirm" ? 'confirmacaoSenha' : 'senha'}
             type={values.showPassword ? 'text' : 'password'}
-            value={ signUpDataState.senha}
-            onChange={type === "confirm" ? handleConfirmSenha : handleSignupData}
+            value={ type === "confirm" ? confirmSenhaState : signUpDataState.senha}
+            onChange={type === "confirm" ? handleConfirmSenha :  handleSignUpData}
             placeholder={type === "confirm" ?'Repita a senha*' : 'Senha*' }
             name= {type === "confirm" ? 'confirmacaoSenha' : 'senha'}
             focused={false}
@@ -58,11 +58,8 @@ export default function InputAdornments({type}) {
                   {values.showPassword ? <VisibilityOff /> : <Visibility />}
                 </IconButton>
               </InputAdornment>
-              
             }
           />
-
-
         </FormControl>
 
         

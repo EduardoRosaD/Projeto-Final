@@ -1,12 +1,11 @@
 import { Typography } from '@mui/material';
 import Card from '@mui/material/Card';
 import * as React from 'react';
-import InputSenha from '../../InputSenha';
+import InputSenha from '../InputSenha';
 import './styles.css';
 
 
 export default function BasicCard() {
-
 
   return (
     <Card className='card2'
@@ -20,9 +19,6 @@ export default function BasicCard() {
             type='confirm'
           ></InputSenha>
         </div>
-
-
-
     </Card>
   );
 }

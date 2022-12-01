@@ -1,5 +1,5 @@
 import {  Navigate, Outlet,  Route, Routes,} from 'react-router-dom'
-
+import { React } from 'react'
 import  SignIn  from './pages/SignIn/index.jsx'
 import  SignUp  from './pages/SignUp/index.jsx'
 import  Home  from './pages/Home/index.jsx'
