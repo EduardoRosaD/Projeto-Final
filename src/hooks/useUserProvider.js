@@ -51,7 +51,7 @@ async function onSubmitSignUp(e) {
         console.log(error)
         return alert(error)
     }
-} // submit cadastro usuario
+}
 
 const formsUserSignUp = {
     title: 'Adicione seus dados',
