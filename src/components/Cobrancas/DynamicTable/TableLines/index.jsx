@@ -7,11 +7,11 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import './styles.css';
+
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.common.white ,
+    backgroundColor: theme.palette.common.white,
     color: theme.palette.common.black,
   },
   [`&.${tableCellClasses.body}`]: {
@@ -30,42 +30,32 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function createData(cliente, idCliente, cpf,) {
-  return { cliente, idCliente, cpf, };
+const TableRowSx = {
+  fontWeight: 800,
+  fontFamily: 'Nunito',
+  fontSize: 16,
 }
-
-const rows = [
-  createData(' Cameron Williamson', '223456787', '041.777.456-78'),
-  createData('Savannah Nguyen','223456787', '041.777.456-78'),
-  createData('Eclair', '223456781', '041.777.456-78'),
-  createData('Cupcake', '223456781', '041.777.456-78'),
-  createData('Gingerbread', '223456781', '041.777.456-78'),
-];
-
-export default function CustomizedTables() {
+export default function CustomizedTables({ rows }) {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 556 }} aria-label="customized table">
+
+      <Table sx={{ minWidth: 350, maxHeight: 290 }} aria-label="customized table">
         <TableHead>
-          <TableRow sx={{fontFamily: 'Nunito',
-fontStyle: 'normal',
-fontWeight: 800,
-fontSize: 16,
-lineHeight: 50,}}>
-            <StyledTableCell>Cliente</StyledTableCell>
-            <StyledTableCell align="left">ID do clie.</StyledTableCell>
-            <StyledTableCell align="left">Valor</StyledTableCell>
+          <TableRow>
+            <StyledTableCell sx={TableRowSx} align="left">Cliente</StyledTableCell>
+            <StyledTableCell sx={TableRowSx} align="left">{rows[0].idCobranca ? "Id da cob." : "Data de venc."}</StyledTableCell>
+            <StyledTableCell sx={TableRowSx} align="left">Valor</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
-            <StyledTableRow key={row.idCliente}>
-              <StyledTableCell component="th" scope="row">
+            <StyledTableRow key={row.idCobranca}>
+              <StyledTableCell align="left" component="th" scope="row">
                 {row.cliente}
               </StyledTableCell>
-              <StyledTableCell align="center">{row.idCliente}</StyledTableCell>
-              <StyledTableCell align="center">{row.cpf}</StyledTableCell>
-            
+              <StyledTableCell align="left">{row.idCobranca ? row.idCobranca : row.dataVenc}</StyledTableCell>
+              <StyledTableCell align="left">{row.valor}</StyledTableCell>
+
             </StyledTableRow>
           ))}
         </TableBody>

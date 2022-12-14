@@ -4,27 +4,23 @@ import IconButton from '@mui/material/IconButton';
 import InputAdornment from '@mui/material/InputAdornment';
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
 import closed from '../../assets/closed.svg';
 import iconeModalRecusaCobranca from '../../assets/iconeModalRecusaCobranca.svg';
 import checkedCliente from '../../assets/images/checkedCliente.svg';
 import clientesLogoOff from '../../assets/images/clientesLogoOff.svg';
-import clientesLogoOn from '../../assets/images/clientesLogoOn.svg';
-import cobrancasLogoOff from '../../assets/images/cobrancasLogoOff.svg';
-import cobrancasLogoOn from '../../assets/images/cobrancasLogoOn.svg';
-import homeLogoOff from '../../assets/images/homeLogoOff.svg';
-import homeLogoOn from '../../assets/images/homeLogoOn.svg';
 import botaoFiltro from '../../assets/mainImages/botaoFiltro.svg';
 import redClosed from '../../assets/redClosed.svg';
+import Sidebar from '../../components/SideBar/index';
 import Header from '../../componentsSprint2/Header/index';
 import TabelaCobrancas from '../../componentsSprint2/TabelaCobrancas/index';
-import UserContext from '../../context/UserContext';
+import ChargesHeader from '../../components/Cobrancas/chargesHeader';
 import api from '../../services/api';
 import './styles.css';
 
-
 function Cobrancas() {
     const navigate = useNavigate();
-    const [homeState, setHomeState] = React.useState('cobrancas');
+    // const [homeState, setHomeState] = React.useState('cobrancas');
 
     const [inps, setInps] = React.useState([])
 
@@ -49,20 +45,20 @@ function Cobrancas() {
         setModalRecusaState(!modalRecusaCobranca);
         setTimeout(() => {
             setModalRecusaState(false)
-          }, 2000)
-    
+        }, 2000)
+
     }
     const handleModalSucessoCliente = () => {
         setModalSucessoCliente(!modalSucessoCliente);
         setTimeout(() => {
             setModalSucessoCliente(false)
-          }, 2000)
+        }, 2000)
     }
     const handleModalSucessoCobranca = () => {
         setModalSucessoCobranca(!modalSucessoCobranca);
         setTimeout(() => {
             setModalSucessoCobranca(false)
-          }, 2000)
+        }, 2000)
     }
 
     const createData = (nome_cliente, valor, dataVencimento, status_cobranca, descricao, id) => {
@@ -82,9 +78,9 @@ function Cobrancas() {
 
     const handleCobrancaSelecionada = (cobranca) => {
         setCobrancaSelecionadaState(cobranca);
-        if ( modalRecusaCobranca === true){
-        setModalRecusaState(!modalRecusaCobranca)
-    }
+        if (modalRecusaCobranca === true) {
+            setModalRecusaState(!modalRecusaCobranca)
+        }
     }
 
     cobrancasState.map((cobranca) => {
@@ -101,195 +97,54 @@ function Cobrancas() {
 
 
 
-    const handleHomeState = () => {
-        setHomeState('home')
-        navigate('/home')
-    }
-    const handleClientesState = () => {
-        setHomeState('clientes')
-        navigate('/clientes')
-    }
-    const handleCobrancasState = () => {
-        setHomeState('cobrancas')
-        navigate('/cobrancas')
-    }
+    // const handleHomeState = () => {
+    //     setHomeState('home')
+    //     navigate('/home')
+    // }
+    // const handleClientesState = () => {
+    //     setHomeState('clientes')
+    //     navigate('/clientes')
+    // }
+    // const handleCobrancasState = () => {
+    //     setHomeState('cobrancas')
+    //     navigate('/cobrancas')
+    // }
     const handleTipoModalSucessoCobranca = (tipo) => {
         setModalSucessoCobrancaEditada(tipo)
         console.log('teste edit')
     }
 
-
-
     return (
-        <UserContext.Provider value={{
 
-            handleCobrancaSelecionada,
-            handleTipoModalSucessoCobranca,
-            handleOpen,
-            handleClose,
-            handleModalSucessoCobranca,
-            handleModalRecusaCobranca,
+        <MainContainer>
 
-            cobrancaSelecionadaState,
-            openCobrancaSelecionada,
-            getCobrancas,
+            <Sidebar />
 
-            modalRecusaCobranca,
+            <ContentContainer>
 
-            setModalSucessoCobrancaEditada,
-            setModalRecusaState
-            
-            
-        }}>
-            <div className='main-container-home'>
+                <Header
+                ></Header>
+
+               <ChargesHeader/>
 
 
-                <div className='container1-home'>
-                    <div className='button-container'>
+            </ContentContainer>
 
-
-                        <button style={{ color: homeState === 'home' ? '#DA0175' : '#343447', borderRight: homeState === 'home' ? ' 2px solid #DA0175' : 'none', display: 'flex', alignItems: 'center', flexDirection: 'column', marginLeft: 18, paddingRight: 18 }} onClick={handleHomeState}>
-                            <img src={homeState === 'home' ? homeLogoOn : homeLogoOff} alt='img'></img>
-                            Home
-                        </button>
-
-
-                        <button style={{ color: homeState === 'clientes' ? '#DA0175' : '#343447', marginTop: 81, marginBottom: 81, borderRight: homeState === 'clientes' ? ' 2px solid #DA0175' : 'none' }} onClick={handleClientesState}>
-                            <img src={homeState === 'clientes' ? clientesLogoOn : clientesLogoOff} alt='img'></img>
-                            Clientes
-                        </button>
-
-                        <button style={{ color: homeState === 'cobrancas' ? '#DA0175' : '#343447', marginLeft: -9, borderRight: homeState === 'cobrancas' ? ' 2px solid #DA0175' : 'none' }} onClick={handleCobrancasState}>
-                            <img src={homeState === 'cobrancas' ? cobrancasLogoOn : cobrancasLogoOff} alt='img'></img>
-                            Cobrancas
-                        </button>
-
-                    </div>
-
-                </div>
-
-
-                <div className='container2-home'>
-
-                    <Header
-                        inps={inps}
-                        setInps={setInps}
-                    ></Header>
-
-                    <div className='clientes-title-btn-input'>
-
-                        <div className='logo-title'>
-                            <img src={clientesLogoOff} alt='clientes-icone'></img>
-                            <h2 className='cliente-title'>Cobrancas</h2>
-                        </div>
-
-                        <div className='btn-input'>
-
-
-
-
-                            <img src={botaoFiltro} alt='botaoFiltro'></img>
-                            <Input
-                                sx={{
-                                    border: '1px solid #D0D5DD', width: '322px', borderRadius: 1.4, height: 33, '&:before': {
-                                        borderBottom: 'none !important'
-                                    }, '&:after': {
-                                        borderBottom: 'none !important'
-                                    },
-                                    boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
-                                    padding: '7px 8px',
-                                    backgroundColor: '#FFFFFF',
-                                }}
-                                focused={false}
-                                placeholder={'Pesquisar'}
-                                endAdornment={
-                                    <InputAdornment position="end">
-                                        <IconButton aria-label="toggle password visibility"
-                                        >
-                                            <SearchIcon />
-
-                                        </IconButton>
-                                    </InputAdornment>
-                                }
-                            >
-
-                            </Input>
-
-                        </div>
-
-                    </div>
-
-
-
-
-                    <div className='container-tabelas-clientes'>
-
-                        <div className='tabelas2-container'>
-
-                            <div className='tabela-container2'>
-
-
-
-                                <TabelaCobrancas
-                                    rows={rows}
-                                    handleModalSucessoCobranca={handleModalSucessoCobranca}
-                                >
-                                </TabelaCobrancas>
-
-
-
-
-
-                            </div>
-
-                        </div>
-                    </div>
-                    {modalSucessoCliente &&
-                        <div className='modal-sucesso-cadastro-cliente'>
-                            <img src={checkedCliente} alt='checked'></img>
-                            <p>Cadastro concluído com sucesso</p>
-                            <img src={closed} alt='close' className='close-cliente'
-                                onClick={handleModalSucessoCliente}>
-
-                            </img>
-
-                        </div>
-                    }
-                      { modalRecusaCobranca &&         <div className='modal-recusa-deletar-cobranca'
-                        >
-                            <img src={iconeModalRecusaCobranca} alt='checked'
-                            ></img>
-                            <p>Esta cobranca não pode ser excluída!</p>
-
-                            <img src={redClosed} alt='close' className='pointer'
-                                onClick={handleModalRecusaCobranca}>
-
-                            </img>
-
-                        </div> }
-                
-                   
-                    {modalSucessoCobranca &&
-                        <div className='modal-sucesso-cadastro-cliente'
-                        >
-                            <img src={checkedCliente} alt='checked'
-                            ></img>
-                            {modalSucessoCobrancaEditada === 'cadastrada' ? <p>Cobranca cadastrada com sucesso</p> : modalSucessoCobrancaEditada === 'editada' ? <p>Cobranca editada com sucesso</p> : <p>Cobranca excluída com sucesso</p>}
-
-                            <img src={closed} alt='close' className='close-cliente'
-                                onClick={handleModalSucessoCobranca}>
-
-                            </img>
-
-                        </div>
-                    }
-                
-
-                </div>
-
-            </div >
-        </UserContext.Provider>
+        </MainContainer >
     )
 }
 
 export default Cobrancas;
+
+const MainContainer = styled.div`
+   display: flex;
+    min-height: 100%;
+    height: 100vh;
+`
+const ContentContainer = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
+background-color: #F8F8F9;
+`

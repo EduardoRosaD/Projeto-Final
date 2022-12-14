@@ -22,20 +22,22 @@ export default function MyRoutes(){
             <Route path='/SignUp' element={ <SignUp/>}> </Route>
 
             <Route path='/SignIn' element={ <SignIn/>}> </Route>
-
+            <Route path='/home' element={<Home/>}></Route>
+            <Route path='/clientes' element={<Clientes/>}></Route>
+            <Route path='/cobrancas' element={<Cobrancas/>}></Route>
             <Route>
-
+{/* 
                 <Route path='/home' element={<ProtectedRoutes redirectTo='/'/>}>
-                    <Route path='/home' element={<Home/>}></Route>
-                </Route>
+                
+                </Route> */}
 
-                <Route path='/clientes' element={<ProtectedRoutes redirectTo='/'/>}>
-                    <Route path='/clientes' element={<Clientes/>}></Route>
-                    </Route>
+                {/* <Route path='/clientes' element={<ProtectedRoutes redirectTo='/'/>}>
                    
-                    <Route path='/cobrancas' element={<ProtectedRoutes redirectTo='/'/>}>
-                    <Route path='/cobrancas' element={<Cobrancas/>}></Route>
-                    </Route>
+                    </Route> */}
+                   
+                    {/* <Route path='/cobrancas' element={<ProtectedRoutes redirectTo='/'/>}>
+                   
+                    </Route> */}
                     
             </Route>
 
