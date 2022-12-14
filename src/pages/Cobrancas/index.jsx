@@ -20,7 +20,7 @@ import TabelaCobrancas from '../../componentsSprint2/TabelaCobrancas/index';
 import UserContext from '../../context/UserContext';
 import api from '../../services/api';
 import './styles.css';
-
+import Sidebar from '../../components/SideBar/index';
 
 function Cobrancas() {
     const navigate = useNavigate();
@@ -144,36 +144,12 @@ function Cobrancas() {
             <div className='main-container-home'>
 
 
-                <div className='container1-home'>
-                    <div className='button-container'>
-
-
-                        <button style={{ color: homeState === 'home' ? '#DA0175' : '#343447', borderRight: homeState === 'home' ? ' 2px solid #DA0175' : 'none', display: 'flex', alignItems: 'center', flexDirection: 'column', marginLeft: 18, paddingRight: 18 }} onClick={handleHomeState}>
-                            <img src={homeState === 'home' ? homeLogoOn : homeLogoOff} alt='img'></img>
-                            Home
-                        </button>
-
-
-                        <button style={{ color: homeState === 'clientes' ? '#DA0175' : '#343447', marginTop: 81, marginBottom: 81, borderRight: homeState === 'clientes' ? ' 2px solid #DA0175' : 'none' }} onClick={handleClientesState}>
-                            <img src={homeState === 'clientes' ? clientesLogoOn : clientesLogoOff} alt='img'></img>
-                            Clientes
-                        </button>
-
-                        <button style={{ color: homeState === 'cobrancas' ? '#DA0175' : '#343447', marginLeft: -9, borderRight: homeState === 'cobrancas' ? ' 2px solid #DA0175' : 'none' }} onClick={handleCobrancasState}>
-                            <img src={homeState === 'cobrancas' ? cobrancasLogoOn : cobrancasLogoOff} alt='img'></img>
-                            Cobrancas
-                        </button>
-
-                    </div>
-
-                </div>
+               <Sidebar/>
 
 
                 <div className='container2-home'>
 
                     <Header
-                        inps={inps}
-                        setInps={setInps}
                     ></Header>
 
                     <div className='clientes-title-btn-input'>

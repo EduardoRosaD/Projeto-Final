@@ -7,11 +7,11 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import './styles.css';
+
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.common.white ,
+    backgroundColor: theme.palette.common.white,
     color: theme.palette.common.black,
   },
   [`&.${tableCellClasses.body}`]: {
@@ -30,37 +30,32 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function createData(cliente, idCobranca, valor) {
-  return { cliente, idCobranca, valor };
+const TableRowSx = {
+  fontWeight: 800,
+  fontFamily: 'Nunito',
+  fontSize: 16,
 }
-
-const rows = [
-  createData('Sara Silva', '223456787', 'R$ 1000,00'),
-  createData('Carlos Prado', '223456781','R$ 400,00'),
-  createData('Lara Brito', '223456781', 'R$ 900,00'),
-  createData('Soraia Neves', '223456787', 'R$ 700,00'),
-];
-
-export default function CustomizedTables() {
+export default function CustomizedTables({ rows }) {
   return (
     <TableContainer component={Paper}>
+
       <Table sx={{ minWidth: 350, maxHeight: 290 }} aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell>Cliente</StyledTableCell>
-            <StyledTableCell align="left">ID da cob.</StyledTableCell>
-            <StyledTableCell align="left">Valor</StyledTableCell>
+            <StyledTableCell sx={TableRowSx} align="left">Cliente</StyledTableCell>
+            <StyledTableCell sx={TableRowSx} align="left">{rows[0].idCobranca ? "Id da cob." : "Data de venc."}</StyledTableCell>
+            <StyledTableCell sx={TableRowSx} align="left">Valor</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
             <StyledTableRow key={row.idCobranca}>
-              <StyledTableCell component="th" scope="row">
+              <StyledTableCell align="left" component="th" scope="row">
                 {row.cliente}
               </StyledTableCell>
-              <StyledTableCell align="center">{row.idCobranca}</StyledTableCell>
-              <StyledTableCell align="center">{row.valor}</StyledTableCell>
-            
+              <StyledTableCell align="left">{row.idCobranca ? row.idCobranca : row.dataVenc}</StyledTableCell>
+              <StyledTableCell align="left">{row.valor}</StyledTableCell>
+
             </StyledTableRow>
           ))}
         </TableBody>
